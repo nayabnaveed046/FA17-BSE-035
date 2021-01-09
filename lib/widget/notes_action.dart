@@ -1,11 +1,8 @@
+import 'package:final_paper/icon.dart';
+import 'package:final_paper/models.dart';
+import 'package:final_paper/services.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
-import 'package:flt_keep/icons.dart';
-import 'package:flt_keep/models.dart';
-import 'package:flt_keep/services.dart';
-import 'package:flt_keep/styles.dart';
-
 
 class NoteActions extends StatelessWidget {
   @override
@@ -16,7 +13,7 @@ class NoteActions extends StatelessWidget {
     final uid = Provider.of<CurrentUser>(context)?.data?.uid;
 
     final textStyle = TextStyle(
-      color: kHintTextColorLight,
+      color: Colors.white,
       fontSize: 16,
     );
 

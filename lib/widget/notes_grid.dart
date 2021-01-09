@@ -1,8 +1,7 @@
+import 'package:final_paper/models.dart' show Note;
 import 'package:flutter/material.dart';
 
-import 'package:flt_keep/models.dart' show Note;
-
-import 'note_item.dart';
+import 'Note_items.dart';
 
 /// Grid view of [Note]s.
 class NotesGrid extends StatelessWidget {

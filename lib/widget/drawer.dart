@@ -1,7 +1,5 @@
-import 'package:flt_keep/icons.dart';
-import 'package:flt_keep/models.dart';
-import 'package:flt_keep/styles.dart';
-import 'package:flt_keep/utils.dart';
+import 'package:final_paper/icon.dart';
+import 'package:final_paper/models.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -16,7 +14,7 @@ class AppDrawer extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               _drawerHeader(context),
-              if (isNotIOS) const SizedBox(height: 25),
+              SizedBox(height: 25),
               DrawerFilterItem(
                 icon: AppIcons.thumbtack,
                 title: 'Notes',
@@ -69,17 +67,17 @@ class AppDrawer extends StatelessWidget {
           child: RichText(
             text: const TextSpan(
               style: TextStyle(
-                color: kHintTextColorLight,
+                color: Colors.white,
                 fontSize: 26,
-                fontWeight: FontWeights.light,
+
                 letterSpacing: -2.5,
               ),
               children: [
                 const TextSpan(
                   text: 'Flt',
                   style: TextStyle(
-                    color: kAccentColorLight,
-                    fontWeight: FontWeights.medium,
+                    color: Colors.white,
+
                     fontStyle: FontStyle.italic,
                   ),
                 ),

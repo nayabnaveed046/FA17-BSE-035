@@ -1,8 +1,8 @@
 import 'package:collection_ext/iterables.dart';
-import 'package:flt_keep/model/note.dart';
+import 'package:final_paper/model/Notes.dart';
 import 'package:flutter/material.dart';
 
-import 'note_item.dart';
+import 'Note_items.dart';
 
 /// ListView for notes
 class NotesList extends StatelessWidget {

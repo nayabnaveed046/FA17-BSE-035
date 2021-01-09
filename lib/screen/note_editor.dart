@@ -1,9 +1,10 @@
+import 'package:final_paper/icon.dart';
+import 'package:final_paper/models.dart'
+    show CurrentUser, Note, NoteState, NoteStateX;
+import 'package:final_paper/services.dart';
+import 'package:final_paper/styles.dart';
+import 'package:final_paper/widgets.dart';
 
-import 'package:flt_keep/icons.dart';
-import 'package:flt_keep/models.dart' show CurrentUser, Note, NoteState, NoteStateX;
-import 'package:flt_keep/services.dart';
-import 'package:flt_keep/styles.dart';
-import 'package:flt_keep/widgets.dart';
 /// The editor of a [Note], also shows every detail about a single note.
 class NoteEditor extends StatefulWidget {
   /// Create a [NoteEditor],

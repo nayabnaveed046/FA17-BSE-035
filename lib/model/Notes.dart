@@ -1,10 +1,9 @@
 import 'dart:ui';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:final_paper/services.dart' show NoteQuery;
 import 'package:flutter/foundation.dart';
 import 'package:intl/intl.dart';
-
-import 'package:flt_keep/services.dart' show NoteQuery;
 
 /// Data model of a note.
 class Note extends ChangeNotifier {

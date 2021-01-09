@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:flt_keep/styles.dart';
+import 'package:final_paper/styles.dart';
 
 /// Settings screen.
 class SettingsScreen extends StatefulWidget {

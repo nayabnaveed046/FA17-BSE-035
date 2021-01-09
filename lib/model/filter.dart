@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 
-import 'note.dart';
+import 'notes.dart';
 
 class NoteFilter extends ChangeNotifier {
   NoteState _noteState;

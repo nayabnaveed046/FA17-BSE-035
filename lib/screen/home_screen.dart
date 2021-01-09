@@ -1,15 +1,15 @@
+import 'package:final_paper/icon.dart' show AppIcons;
+import 'package:final_paper/models.dart'
+    show CurrentUser, Note, NoteState, NoteStateX, NoteFilter;
+import 'package:final_paper/services.dart' show notesCollection, CommandHandler;
+import 'package:final_paper/styles.dart';
+import 'package:final_paper/utils.dart';
+import 'package:final_paper/widgets.dart' show AppDrawer, NotesGrid, NotesList;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:tuple/tuple.dart';
-
-import 'package:flt_keep/icons.dart' show AppIcons;
-import 'package:flt_keep/models.dart' show CurrentUser, Note, NoteState, NoteStateX, NoteFilter;
-import 'package:flt_keep/services.dart' show notesCollection, CommandHandler;
-import 'package:flt_keep/styles.dart';
-import 'package:flt_keep/utils.dart';
-import 'package:flt_keep/widgets.dart' show AppDrawer, NotesGrid, NotesList;
 
 /// Home screen, displays [Note] grid or list.
 class HomeScreen extends StatefulWidget {

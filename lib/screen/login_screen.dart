@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_sign_in/google_sign_in.dart' show GoogleSignIn;
-import 'package:firebase_auth/firebase_auth.dart' show FirebaseAuth, AuthResult, GoogleAuthProvider;
-import 'package:flt_keep/styles.dart';
+import 'package:firebase_auth/firebase_auth.dart'
+    show FirebaseAuth, AuthResult, GoogleAuthProvider;
+import 'package:final_paper/styles.dart';
 
 /// Login screen.
 class LoginScreen extends StatefulWidget {
@@ -32,9 +33,9 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) => Scaffold(
     body: Theme(
-      data: ThemeData(primarySwatch: kAccentColorLight).copyWith(
+      data: ThemeData(primarySwatch:).copyWith(
         buttonTheme: ButtonTheme.of(context).copyWith(
-          buttonColor: kAccentColorLight,
+          buttonColor: Colors.blueGrey,
           textTheme: ButtonTextTheme.primary,
         ),
       ),
@@ -55,7 +56,6 @@ class _LoginScreenState extends State<LoginScreen> {
                   const Text('Capture anything',
                     style: TextStyle(
                       fontSize: 24,
-                      fontWeight: FontWeights.medium,
                     ),
                   ),
                   const SizedBox(height: 32),
@@ -142,7 +142,7 @@ class _LoginScreenState extends State<LoginScreen> {
     child: Text(_errorMessage,
       style: const TextStyle(
         fontSize: 14,
-        color: kErrorColorLight,
+          color: Colors.white
       ),
     ),
   );

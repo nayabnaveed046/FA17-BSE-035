@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:collection_ext/iterables.dart';
-import 'package:flt_keep/models.dart' show Note, NoteState;
-import 'package:flt_keep/styles.dart';
+import 'package:final_paper/models.dart' show Note, NoteState;
+import 'package:final_paper/styles.dart';
 import 'package:flutter/material.dart';
 
 /// An undoable action to a [Note].

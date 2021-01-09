@@ -20,8 +20,14 @@ class AppDrawer extends StatelessWidget {
                 title: 'Notes',
                 isChecked: filter.noteState == NoteState.unspecified,
                 onTap: () {
-                  filter.noteState = NoteState.unspecified;
-                  Navigator.pop(context);
+                  filter.noteState == NoteState.unspecified
+                  ,
+                  Navigator
+                  .
+                  pop
+                  (
+                  context
+                  );
                 },
               ),
               const Divider(),

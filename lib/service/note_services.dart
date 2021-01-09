@@ -69,8 +69,8 @@ class NoteStateUpdateCommand extends NoteCommand {
 }
 
 mixin CommandHandler<T extends StatefulWidget> on State<T> {
-  Future<void> processNoteCommand(
-      ScaffoldState scaffoldState, NoteCommand command) async {
+  Future<void> processNoteCommand(ScaffoldState scaffoldState,
+      NoteCommand command) async {
     if (command == null) {
       return;
     }
@@ -89,23 +89,28 @@ mixin CommandHandler<T extends StatefulWidget> on State<T> {
 }
 
 extension NoteQuery on QuerySnapshot {
-  List<Note> toNotes() => documents.map((d) => d.toNote()).nonNull.asList();
+  List<Note> toNotes() =>
+      documents
+          .map((d) => d.toNote())
+          .nonNull
+          .asList();
 }
 
 extension NoteDocument on DocumentSnapshot {
-  Note toNote() => exists
-      ? Note(
-          id: documentID,
-          title: data['title'],
-          content: data['content'],
-          color: _parseColor(data['color']),
-          state: NoteState.values[data['state'] ?? 0],
-          createdAt:
-              DateTime.fromMillisecondsSinceEpoch(data['createdAt'] ?? 0),
-          modifiedAt:
-              DateTime.fromMillisecondsSinceEpoch(data['modifiedAt'] ?? 0),
-        )
-      : null;
+  Note toNote() =>
+      exists
+          ? Note(
+        id: documentID,
+        title: data['title'],
+        content: data['content'],
+        color: _parseColor(data['color']),
+        state: NoteState.values[data['state'] ?? 0],
+        createdAt:
+        DateTime.fromMillisecondsSinceEpoch(data['createdAt'] ?? 0),
+        modifiedAt:
+        DateTime.fromMillisecondsSinceEpoch(data['modifiedAt'] ?? 0),
+      )
+          : null;
 
   Color _parseColor(num colorInt) => Color(colorInt ?? kNoteColors.first.value);
 }
@@ -118,9 +123,10 @@ extension NoteStore on Note {
         : col.document(id).updateData(toJson());
   }
 
-  Future<void> updateState(NoteState state, String uid) async => id == null
-      ? updateWith(state: state) // new note
-      : updateNoteState(state, id, uid);
+  Future<void> updateState(NoteState state, String uid) async =>
+      id == null
+          ? updateWith(state: state) // new note
+          : updateNoteState(state, id, uid);
 }
 
 CollectionReference notesCollection(String uid) =>
